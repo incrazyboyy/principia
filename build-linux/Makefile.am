@@ -28,7 +28,7 @@ principia_CFLAGS = ${GLOBAL_FLAGS} -std=gnu99 -DFT2_BUILD_LIBRARY\
 	-DLOAD_PCX -DLOAD_PNM -DLOAD_TGA -DLOAD_XCF -DLOAD_XPM \
 	-DLOAD_XV
 principia_CXXFLAGS = ${GLOBAL_FLAGS}
-principia_LDADD = -lz -ldl -lGL -lpthread -lX11 -lXi -lrt ${GTK_LIBS} -lcurl -ljpeg -lpng -lfreetype ${SDL2_LIBS} ${SDL2_TTF_LIBS} ${SDL2_GFX_LIBS} ${SDL2_IMAGE_LIBS} ${SDL2_MIXER_LIBS}
+principia_LDADD = -L/Users/chris/git/angle/out/Release/ -lz -ldl -lGLESv2 -lEGL -lpthread -lX11 -lXi ${GTK_LIBS} -lcurl -ljpeg -lpng -lfreetype ${SDL2_LIBS} ${SDL2_TTF_LIBS} ${SDL2_GFX_LIBS} ${SDL2_IMAGE_LIBS} ${SDL2_MIXER_LIBS}
 principia_LDFLAGS = 
 
 principia_SOURCES = \
@@ -359,3 +359,5 @@ principia_SOURCES = \
 ../src/src/Box2D/Dynamics/Joints/b2RopeJoint.cc \
 ../src/src/Box2D/Dynamics/Joints/b2WeldJoint.cc \
 ../src/src/Box2D/Dynamics/Joints/b2WheelJoint.cc
+
+
